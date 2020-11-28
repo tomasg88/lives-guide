@@ -1,0 +1,35 @@
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In  -->
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="588.1px" height="770px" viewBox="0 0 588.1 770" style="enable-background:new 0 0 588.1 770;"
+	 xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#812990;}
+	.st1{fill:none;stroke:url(#SVGID_1_);stroke-miterlimit:10;}
+	.st2{fill:none;stroke:url(#SVGID_2_);stroke-miterlimit:10;}
+</style>
+<defs>
+</defs>
+<g>
+	<path class="st0" d="M285.6,0.5c27.5,35.7,93.6,87.5,87,141c-12,97-219.9,129.9-235,219c-13.6,80,138.4,101.8,138,191
+		c-0.2,53.8-50,128.5-273,218c195,0,390,0,585,0c0-256.3,0-512.7,0-769C500.6,0.5,372.6,0.5,285.6,0.5z"/>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0" y1="385" x2="588.0876" y2="385">
+		<stop  offset="0.8979" style="stop-color:#850A9B"/>
+		<stop  offset="1" style="stop-color:#000000"/>
+	</linearGradient>
+	<path class="st1" d="M285.6,0.5c27.5,35.7,93.6,87.5,87,141c-12,97-219.9,129.9-235,219c-13.6,80,138.4,101.8,138,191
+		c-0.2,53.8-50,128.5-273,218c195,0,390,0,585,0c0-256.3,0-512.7,0-769C500.6,0.5,372.6,0.5,285.6,0.5z"/>
+</g>
+<filter id="dropshadow" height="130%">
+  <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> <!-- stdDeviation is how much to blur -->
+  <feOffset dx="2" dy="2" result="offsetblur"/> <!-- how much to offset -->
+  <feComponentTransfer>
+    <feFuncA type="linear" slope="0.5"/> <!-- slope is the opacity of the shadow -->
+  </feComponentTransfer>
+  <feMerge> 
+    <feMergeNode/> <!-- this contains the offset blurred image -->
+    <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+  </feMerge>
+</filter>
+<circle r="10" style="filter:url(#dropshadow)"/>
+</svg>
