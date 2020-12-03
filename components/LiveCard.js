@@ -1,33 +1,43 @@
 import React from 'react'
+import Image from 'next/image'
+
+
 
 const CardContainer = ({ children }) => (
-	<div className="flex align-end p-5 rounded-xl bg-white shadow-lg w-1/6 h-64 ml-5 mr-5 z-10">
+	<div className="relative flex items-end justify-center p-5 rounded-xl bg-white shadow-2xl min-w-40 max-w-md h-64 mx-5 z-10 hover:shadox-2xl">
 		{ children }
 	</div>
 )
 
 const DataContainer = ({ children }) => (
-	<div>
+	<div className="flex flex-col p-2 w-full h-1/6 relative bg-white rounded-xl">
 		{ children }
 	</div>
 )
 
-
-const LiveCard = () => {
+const LiveCard = (card) => {
     return (
         <CardContainer>
-			{/* Background image */}
+			<div className="absolute block h-full w-full z-0 top-0 left-0">
+				{/* <div style={styling}></div> */}
+				<Image
+					src={'/samples/Desert.jpg'}
+					alt="Show picture"
+					layout="fill"
+					className="w-full h-full rounded-xl"
+				/>
+			</div>
 			<DataContainer >
-				<h3 className="title"></h3>
-				<p className="description"></p>
+				<h3 className="text-bold text-xl text-center">{card.title || "titulo"}</h3>
+				<p className="text-thin text-xs">{card.description || 'Aca una descripcion de lo que que se que va a hablar en el show'}</p>
 				<div className="rrss">
 					<span className="icon"></span>
-					<p className="live-account"></p>
+					<div className="text-bold">{card.account || '_tomygonzalez.dev'}</div>
 				</div>
-				<p className="date"></p>
-				<div className="goto">
-					<button>
-
+				<p className="text-gray-700">{card.date || 'Lunes 7, a las 21.00'}</p>
+				<div className="self-center h-12 flex items-center">
+					<button className="bg-gray-400 px-10 py-1 rounded-full shadow-md hover:bg-gray-700 hover:text-white transition-colors">
+						Ir
 					</button>
 				</div>
 			</DataContainer>

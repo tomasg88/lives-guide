@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import Backgrounds from '../components/Backgrounds'
+import Category from '../components/Category'
 import Container from '../components/Container'
 import LiveCard from '../components/LiveCard'
 
-export default function Home() {
+export default function Home(props) {
 	return (
 		<div>
 			<Head>
@@ -11,11 +12,10 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
+			<Backgrounds />
 			<main>
-				<Backgrounds />
-
+				<Category />
 				<Container>
-					<LiveCard />
 					<LiveCard />
 					<LiveCard />
 				</Container>
