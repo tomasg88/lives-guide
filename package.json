@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "next": "10.0.3",
+    "next-contentful": "^0.4.3",
     "react": "17.0.1",
     "react-dom": "17.0.1"
   },
