@@ -13,7 +13,7 @@ const DataContainer = ({ children }) => (
 	</div>
 );
 
-const LiveCard = (card) => {
+const LiveCard = ({card}) => {
 	return (
 		<CardContainer>
 			<div className="absolute block h-full w-full z-0 top-0 left-0">
@@ -27,7 +27,7 @@ const LiveCard = (card) => {
 			</div>
 			<DataContainer>
 				<h3 className="text-bold text-xl text-center">
-					{card.title || card.name || "titulo"}
+					{card.title}
 				</h3>
 				<p className="text-thin text-xs">
 					{card.description ||
@@ -40,7 +40,7 @@ const LiveCard = (card) => {
 					</div>
 				</div>
 				<p className="text-gray-700">
-					{card.date || "Lunes 7, a las 21.00"}
+					{card.when}
 				</p>
 				<div className="self-center h-12 flex items-center">
 					<button className="bg-gray-400 px-10 py-1 rounded-full shadow-md hover:bg-gray-700 hover:text-white transition-colors">
