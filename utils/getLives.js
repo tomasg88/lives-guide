@@ -4,7 +4,9 @@ const client = require("contentful").createClient({
 });
 
 export async function getLives() {
-	const entries = await client.getEntries({ contentType: "live" });
+	const entries = await client.getEntries({
+		'content_type': 'live'
+	});
 	console.log("getLives -> entries", entries.items);
 	if (entries.items) return entries.items;
 	console.log(`Error getting Entries for ${entries}.`);
