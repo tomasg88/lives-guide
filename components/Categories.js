@@ -9,8 +9,8 @@ const CategoryContainer = ({ children }) => {
 }
 
 const Category = ({ category }) => (
-    <div className="mx-4 rounded-md shadow-md px-8 py-4">
-        <p>{ category.name }</p>
+    <div className="mx-4 rounded-md shadow-md px-8 py-4 hover:shadow-2xl hover:transition-shadow transition-shadow">
+        <button>{ category.name }</button>
     </div>
 )
 
@@ -18,7 +18,6 @@ const Category = ({ category }) => (
 export default function Categories({ list }) {
     return (
         <CategoryContainer>
-            {/* background */}
             {
                 list.map((c, i) => <Category key={i} category={c} />)
             }

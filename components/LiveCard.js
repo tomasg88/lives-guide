@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 const CardContainer = ({ children }) => (
-	<div className="relative flex items-end justify-center p-5 rounded-xl bg-white shadow-2xl min-w-40 max-w-md h-64 mx-5 z-10 hover:shadox-2xl">
+	<div className="relative flex items-end justify-center p-5 rounded-xl bg-white shadow-lg min-w-40 max-w-md h-64 mx-5 z-10 hover:shadow-xl hover:transition-shadow transition-shadow">
 		{children}
 	</div>
 );

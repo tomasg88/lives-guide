@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Container({ children }) {
 	return (
-		<div className="h-screen mt-10 px-6 flex justify-center align-end overflow-hidden">
+		<div className="cccc mt-64 h-auto p-40 flex justify-center items-end overflow-hidden">
 			{children}
 		</div>
 	);
