@@ -5,7 +5,7 @@ import tw from "tailwind-styled-components";
 const CardContainer = tw.div`
 	relative flex items-end justify-center 
 	min-w-40 max-w-md h-80
-	mx-5 p-5 z-10 
+	mx-5 p-5 z-1 
 	rounded-xl shadow-lg bg-transparent
 	hover:shadow-xl hover:transition-shadow transition-shadow
 `

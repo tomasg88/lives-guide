@@ -15,4 +15,4 @@ export default function Categories({ list }) {
 
 const CategoryContainer = tw.div`fixed flex items-center justify-start top-0 left-0 w-full h-16 p-4 mx-auto bg-white-600`
             
-const Category = tw.div`mx-4 rounded-md shadow-md px-8 py-4 hover:shadow-2xl hover:transition-shadow transition-shadow`
+const Category = tw.div`mx-4 rounded-md shadow-md bg-white px-8 py-4 hover:shadow-2xl hover:transition-shadow transition-shadow`

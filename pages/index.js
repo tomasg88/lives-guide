@@ -1,11 +1,15 @@
 import Head from "next/head";
+import { useState } from "react";
 import tw from "tailwind-styled-components";
+import AddButton from "../components/AddButton";
 import Backgrounds from "../components/Backgrounds";
 import Categories from "../components/Categories";
+import CreateLiveForm from "../components/CreateLiveForm";
 import LiveCard from "../components/LiveCard";
 import { getCategories, getLives } from "../utils/getLives";
 
 function Home(props) {
+	const [showCreateForm, setShowCreateForm] = useState(false)
 	return (
 		<div>
 			<Head>
@@ -14,6 +18,11 @@ function Home(props) {
 			</Head>
 
 			<Backgrounds />
+			{
+				showCreateForm && 
+					<CreateLiveForm closeFormCb={() => setShowCreateForm(false)} />
+			}
+			<AddButton openFormCb={() => setShowCreateForm(true)} />
 			<main>
 				<Categories list={props.categories} />
 				<Container>
