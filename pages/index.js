@@ -1,12 +1,11 @@
 import Head from "next/head";
 import Backgrounds from "../components/Backgrounds";
-import Category from "../components/Category";
+import Categories from "../components/Categories";
 import Container from "../components/Container";
 import LiveCard from "../components/LiveCard";
-import { getLives } from "../utils/getLives";
+import { getCategories, getLives } from "../utils/getLives";
 
 function Home(props) {
-	console.log("Home -> props", props);
 	return (
 		<div>
 			<Head>
@@ -16,7 +15,7 @@ function Home(props) {
 
 			<Backgrounds />
 			<main>
-				<Category />
+				<Categories list={props.categories} />
 				<Container>
 					{props.lives &&
 						props.lives.map((l, i) => (
@@ -31,14 +30,21 @@ function Home(props) {
 }
 
 export async function getServerSideProps() {
-	const res = await getLives();
-	const lives = await res.map((p) => {
+	const livesRes = await getLives();
+	const lives = await livesRes.map((p) => {
 		return p.fields;
+	});
+
+	const catRes = await getCategories();
+	console.log("getServerSideProps -> catRes", catRes)
+	const categories = await catRes.map((c) => {
+		return c.fields;
 	});
 
 	return {
 		props: {
 			lives,
+			categories
 		},
 	};
 }
