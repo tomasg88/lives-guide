@@ -21,8 +21,6 @@ function Home(props) {
 						props.lives.map((l, i) => (
 							<LiveCard key={i} card={l} />
 						))}
-					{/* <LiveCard />
-					<LiveCard /> */}
 				</Container>
 			</main>
 		</div>
