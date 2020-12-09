@@ -1,17 +1,14 @@
 import React from "react";
 import Image from "next/image";
+import tw from "tailwind-styled-components";
 
-const CardContainer = ({ children }) => (
-	<div className="relative flex items-end justify-center p-5 rounded-xl bg-white shadow-lg min-w-40 max-w-md h-64 mx-5 z-10 hover:shadow-xl hover:transition-shadow transition-shadow">
-		{children}
-	</div>
-);
+const CardContainer = tw.div`
+	relative flex items-end justify-center p-5 rounded-xl bg-white shadow-lg min-w-40 max-w-md h-64 mx-5 z-10 hover:shadow-xl hover:transition-shadow transition-shadow
+`
 
-const DataContainer = ({ children }) => (
-	<div className="flex flex-col p-2 w-full h-1/6 relative bg-white rounded-xl">
-		{children}
-	</div>
-);
+const DataContainer = tw.div`
+	flex flex-col p-2 w-full h-1/6 relative bg-white rounded-xl
+`
 
 const LiveCard = ({card}) => {
 	return (

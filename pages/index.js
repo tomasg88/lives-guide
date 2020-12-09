@@ -34,7 +34,6 @@ export async function getServerSideProps() {
 	});
 
 	const catRes = await getCategories();
-	console.log("getServerSideProps -> catRes", catRes)
 	const categories = await catRes.map((c) => {
 		return c.fields;
 	});
