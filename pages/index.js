@@ -10,7 +10,7 @@ function Home(props) {
 	return (
 		<div>
 			<Head>
-				<title>Create Next App</title>
+				<title>Live Guide</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
