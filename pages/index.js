@@ -17,21 +17,23 @@ function Home(props) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<Backgrounds />
-			{
-				showCreateForm && 
-					<CreateLiveForm closeFormCb={() => setShowCreateForm(false)} />
-			}
-			<AddButton openFormCb={() => setShowCreateForm(true)} />
-			<main>
-				<Categories list={props.categories} />
-				<Container>
-					{props.lives &&
-						props.lives.map((l, i) => (
-							<LiveCard key={i} card={l} />
-						))}
-				</Container>
-			</main>
+			<div className="absolute w-screen h-screen">
+				<Backgrounds />
+				{
+					showCreateForm && 
+						<CreateLiveForm closeFormCb={() => setShowCreateForm(false)} />
+				}
+				<AddButton openFormCb={() => setShowCreateForm(true)} />
+				<main>
+					<Categories list={props.categories} />
+					<Container>
+						{props.lives &&
+							props.lives.map((l, i) => (
+								<LiveCard key={i} card={l} />
+							))}
+					</Container>
+				</main>
+			</div>
 		</div>
 	);
 }
