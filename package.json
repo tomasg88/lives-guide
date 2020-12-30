@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "contentful-management": "^7.5.1",
     "next": "10.0.3",
     "next-contentful": "^0.4.3",
     "react": "17.0.1",

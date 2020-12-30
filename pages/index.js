@@ -47,11 +47,12 @@ export async function getServerSideProps() {
 	const lives = await livesRes.map((p) => {
 		return p.fields;
 	});
-
+    
 	const catRes = await getCategories();
 	const categories = await catRes.map((c) => {
 		return c.fields;
 	});
+    
 
 	return {
 		props: {
