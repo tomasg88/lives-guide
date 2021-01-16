@@ -16,31 +16,46 @@ function Home(props) {
 				<title>Live Guide</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-
-			<div className="absolute w-screen h-screen">
+			<AppContainer>
 				<Backgrounds />
 				{
 					showCreateForm && 
 						<CreateLiveForm closeFormCb={() => setShowCreateForm(false)} />
 				}
 				<AddButton openFormCb={() => setShowCreateForm(true)} />
-				<main>
-					<Categories list={props.categories} />
-					<Container>
-						{props.lives &&
-							props.lives.map((l, i) => (
-								<LiveCard key={i} card={l} />
-							))}
-					</Container>
-				</main>
-			</div>
+				<Categories list={props.categories} />
+				<Main>
+				<h2 className="relative pl-12 my-6 font-sans text-6xl text-gray-900">
+					En directo
+					<span class="flex h-6 w-6 absolute top-0 left-0 transform-gpu translate-y-5">
+						<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+						<span class="relative inline-flex rounded-full h-6 w-6 bg-red-500"></span>
+					</span>
+				</h2>
+				<Container>
+					{props.lives &&
+						props.lives.map((l, i) => (
+							<LiveCard key={i} card={l} />
+						))}
+				</Container>
+				</Main>
+			</AppContainer>
 		</div>
 	);
 }
 
 const Container = tw.div`
-	mt-64 h-auto p-40 flex justify-center items-end overflow-hidden
+	grid grid-cols-5 gap-4
 `
+
+const AppContainer = tw.div`
+	bg-gray-100 min-h-screen pb-24
+`
+
+const Main = tw.main`
+	px-6
+`
+
 
 export async function getServerSideProps() {
 	const livesRes = await getLives();

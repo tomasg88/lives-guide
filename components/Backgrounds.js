@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function Backgrounds() {
     return (
-        <div className="h-screen w-screen fixed top-0 overflow-hidden">
-            <img className="absolute w-100 right-0 h-full" src="/backgrounds/grey-no-shadow.svg" />
-            <img className="absolute w-100 right-0 h-full" src="/backgrounds/purple-no-shadow.svg" />
+        <div className="fixed top-0 w-screen h-screen overflow-hidden opacity-10">
+            <img className="absolute right-0 h-full w-100" src="/backgrounds/grey-no-shadow.svg" />
+            <img className="absolute right-0 h-full w-100" src="/backgrounds/purple-no-shadow.svg" />
         </div>
     )
 }

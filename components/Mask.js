@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Mask({ children }) {
     return (
-        <div className="absolute flex w-screen h-screen bg-black opacity-50 justify-center items-center z-10">
+        <div className="absolute z-50 flex items-center justify-center w-screen h-screen bg-indigo-900 opacity-90">
         </div>
     )
 }
